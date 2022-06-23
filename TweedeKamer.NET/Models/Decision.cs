@@ -13,5 +13,4 @@ public class Decision : BaseModel
     [JsonConverter(typeof(StringEnumConverter))]
     public DecisionStatus Status { get; set; }
     public int AgendapuntZaakBesluitVolgorde { get; set; }
-    public DateTime GewijzigdOp { get; set; }
 }

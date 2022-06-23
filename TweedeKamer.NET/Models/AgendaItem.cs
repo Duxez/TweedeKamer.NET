@@ -9,6 +9,5 @@ public class AgendaItem : BaseModel
     public string Rubriek { get; set; }
     public string Noot { get; set; }
     public string Status { get; set; }
-    public DateTime GewijzigdOp { get; set; }
     public Guid Activiteit_Id { get; set; }
 }
