@@ -7,10 +7,8 @@ using DateType = TweedeKamer.NET.Enums.DateType;
 
 namespace TweedeKamer.NET.Models;
 
-public class Activity
+public class Activity : BaseModel
 {
-    [Description("Globally Unique Identifier of an Activity")]
-    public Guid Id { get; set; }
     [JsonConverter(typeof(StringEnumConverter))]
     [Description("Type of Activity")]
     public ActivityTypes Soort { get; set; }
@@ -26,7 +24,7 @@ public class Activity
     public DateTime Eindtijd { get; set; }
     public string Locatie { get; set; }
     public bool Besloten { get; set; }
-    public Status Status { get; set; }
+    public ActivityStatus ActivityStatus { get; set; }
     public string Vergaderjaar { get; set; }
     public Room Kamer { get; set; }
     public string Noot { get; set; }
@@ -42,6 +40,4 @@ public class Activity
     public DateTime DatumVerzoekTweedeVerlenging { get; set; }
     public DateTime DatumMededelingTweedeVerlenging { get; set; }
     public DateTime Vervaldatum { get; set; }
-    public DateTimeOffset ApiGewijzigdOp { get; set; }
-    public bool Verwijderd { get; set; }
 }
